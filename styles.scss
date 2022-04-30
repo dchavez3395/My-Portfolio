@@ -1,0 +1,732 @@
+/* mixins */
+
+@mixin centerItems() {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin underLine($decorationThick) {
+  text-decoration: underline;
+  text-decoration-color: #ff2957;
+  text-decoration-thickness: $decorationThick;
+}
+
+@mixin cardPosition {
+  width: 40%;
+  height: 40%;
+}
+
+@mixin textDecor($fontSize, $fontColor) {
+  font-size: $fontSize;
+  font-weight: bold;
+  position: relative;
+  color: $fontColor;
+}
+@mixin headingPosition {
+  text-align: left;
+  position: relative;
+}
+
+@mixin skillsTitle {
+  font-family: "quicksand";
+  font-size: 1rem;
+  color: white;
+  position: relative;
+  font-weight: bold;
+}
+
+@mixin topPadding {
+  padding: 7% 15%;
+}
+
+@mixin sectionTitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+  color: $headerColor;
+  font-weight: bolder;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  text-align: center;
+  bottom: 2rem;
+  &:after,
+  &:before {
+    content: '';
+    border-top: 2px solid;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+  }
+  &:after {
+    margin: 0 0 0 20px;
+  }
+}
+
+@mixin footerBTN{
+  background-color: transparent;
+  cursor: pointer;
+  color: $redColor;
+  font-size: 25pt;
+  height: 50px;
+  left: -2rem;
+  line-height: 40pt;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: -14px;
+  width: 45px;
+}
+
+@mixin footerIcon{
+  position: relative;
+  justify-content: center;
+  font-size: 2rem;
+  color: $redColor;
+  opacity: 90%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  &:hover{
+    transform: scale(1.5);
+    color: $headerColor;
+  }
+}
+
+@mixin transformHover{
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+/* variables */
+$headerColor: #FEC260;
+$redColor: #ff2957;
+$aldabraColor: #AAA492;
+$darkBlue: #393E46;
+$greyColor: #0B0C10;
+$scaleHover: scale(1.1);
+$fontOne: "raleway";
+$fontSerif: "source-serif-4";
+$playfairFont: "Playfair Display" , serif;
+$quickSand: "quicksand";
+
+
+/* tags */
+
+html{
+  scroll-behavior: smooth;
+}
+html,body{
+  @include  centerItems
+  font-family: $quickSand;
+  overflow-x: hidden;
+}
+
+
+
+/* containers */
+
+.container-fluid{
+  @include topPadding;
+}
+
+/*sections*/
+
+.grey-section{
+  background-color: $greyColor;
+}
+
+.blue-section{
+  background-color: $darkBlue;
+}
+
+
+/* Navbar */
+
+.navbar-light .navbar-brand {
+  color: white;
+  font-family: $quickSand;
+  &:hover {
+    border-color: white;
+    color: $headerColor;
+  }
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+  font-size: 1.2rem;
+  text-transform: lowercase;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 100%;
+  text-align: right;
+  &:hover {
+    color: $headerColor;
+    transform: $scaleHover;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: lowercase;
+  border-color: $headerColor;
+  border-style: solid;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* top section */
+#title{
+  padding-bottom: 19rem;
+}
+.top-section{
+  position: relative;
+  top: 2rem;
+}
+/* Headings */
+
+.heading {
+  @include headingPosition;
+  top: 7rem;
+  float: left;
+  left: 5rem;
+}
+
+.hidden-heading{
+  display: none;
+}
+
+.top-heading {
+  text-transform: uppercase;
+  @include textDecor(1.3rem, $redColor);
+  font-family: "quicksand";
+}
+
+.mid-heading {
+  @include textDecor(3.5rem, white);
+  font-family: $playfairFont;
+  font-weight: normal;
+}
+
+.bottom-heading {
+  @include textDecor(1rem, #BBBBBB);
+  font-family: $quickSand;
+}
+
+
+
+/* profile photo */
+
+.profile-photo {
+  border-radius: 50%;
+  height: 7rem;
+  float: right;
+  position: relative;
+  left: 15rem;
+  bottom: 1rem;
+}
+
+/* resume button */
+.resume-btn {
+  position: relative;
+  top: 3.9rem;
+  font-family: "ubuntu";
+  color: white;
+  background: transparent;
+  float: left;
+  left: 2.5rem;
+}
+
+/* skills */
+
+#skills{
+  padding-bottom: 9rem;
+}
+
+.skills-header {
+  @include sectionTitle;
+}
+
+.responsive-intro{
+  position: relative;
+  bottom: 3rem;
+}
+
+.responsive-image {
+  position: relative;
+  border-radius: 5%;
+  width: 40%;
+  height: auto;
+  float: left;
+  top: 8rem;
+}
+
+.responsive-title{
+  top: 6rem;
+}
+
+.skill-font{
+  @include skillsTitle;
+  position: relative;
+  left: 10%;
+}
+
+
+.card {
+  position: relative;
+  @include cardPosition;
+  border-style: hidden;
+  background: #1982FC;
+  width: 35%;
+  height: 4rem;
+  right: 7rem;
+  top: 5rem;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+    font-family: bold;
+  }
+
+
+  .responsive-text {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-family: $fontSerif, sans-serif;
+    font-weight: lighter;
+    font-size: 14px;
+    bottom: 0.4rem;
+  }
+
+
+}
+
+/* logo column */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  grid-gap: 1.5rem;
+  position: relative;
+  top: 2rem;
+  margin: auto;
+  left: 25rem;
+}
+
+.skills-title{
+  color: white;
+  position: relative;
+  left: 25.5rem;
+  top: .8rem;
+}
+
+
+.skill-column {
+  position: relative;
+  column-count: 3;
+  column-gap: 3rem;
+  right: 4rem;
+  a {
+    height: 100%;
+    text-decoration: none;
+  }
+
+  .hide {
+    color: white;
+    text-align: right;
+    font-size: 0.8rem;
+    font-weight: bold;
+    position: relative;
+    opacity: 80%;
+    left: 10%;
+
+    &:hover a {
+      opacity: 20%;
+      color: white;
+    }
+  }
+
+  img {
+    position: relative;
+    display: block;
+    object-fit: contain;
+    border-radius: 10%;
+    max-width: 200%;
+    width: 180%;
+
+    height: 4.5rem;
+    -webkit-backface-visibility: hidden;
+    cursor: pointer;
+
+    &:hover {
+      transform: $scaleHover;
+    }
+  }
+}
+
+.intro-box{
+  position: relative;
+  font-family: $quickSand;
+  float: right;
+  right: 22rem;
+  padding: 3% 2% 1%;
+  background-color: #FEC260;
+  border-radius: 2%;
+  display: flex;
+  width: 50%;
+  top:3rem;
+
+}
+
+.intro-left-text{
+  position: relative;
+  width: 27%;
+  font-family: "raleway";
+  font-size: 1.5rem;
+  font-weight: 900;
+  bottom: .5rem;
+  left: .3rem;
+}
+.intro-middle-text{
+  position: relative;
+  font-size: 1.1rem;
+  width: 65%;
+  left: 3.5rem;
+  color: #3A3845;
+  font-family: $quickSand;
+  font-weight: 700;
+  text-align: right;
+  bottom: .5rem;
+
+}
+/* projects */
+
+#projects{
+  padding-bottom: 11rem;
+}
+.projects-header {
+  @include sectionTitle;
+}
+
+.projects-title {
+  @include skillsTitle;
+  position: relative;
+  bottom: 1rem;
+  right: 15%;
+  text-align: center;
+}
+
+.drum-title{
+  top: 11.5rem;
+}
+
+.project-column {
+  position: relative;
+  top: 5rem;
+  max-width: 100%;
+  display: grid;
+  a {
+    text-decoration: none;
+  }
+
+  .project-photos {
+    position: relative;
+    width: 80%;
+    height: 9rem;
+    border-radius: 5%;
+    &:hover {
+      transform: scale(1.1);
+      opacity: 70%;
+    }
+  }
+}
+
+
+
+.noshow{
+  display: none;
+}
+
+
+.bottom-section {
+  position: relative;
+  font-family: $quickSand;
+  top: 5rem;
+  float: right;
+  right: 22rem;
+  padding: 3% 2% 3%;
+  background-color: #FEC260;
+  border-radius: 3%;
+  display: flex;
+
+
+.bottom-left-text{
+  position: relative;
+  font-family: $playfairFont;
+  font-weight: bold;
+  left: 1rem;
+}
+  .bottom-middle-text {
+    position: relative;
+    color: #1F1D36;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: "raleway";
+    width: 40%;
+    left: 4rem;
+    float: right;
+  }
+  .project-btn{
+    position:relative;
+    background: $darkBlue;
+    border: hidden;
+    font-family: "raleway";
+    font-weight: bold;
+    color: white;
+    float: right;
+    left: 6rem;
+    &:hover{
+      transform: scale(1.1);
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+/* contact section */
+
+#contact{
+  padding-bottom: 11rem;
+}
+
+.contact-title{
+  @include sectionTitle;
+}
+.cta{
+  position: relative;
+  width: 45%;
+  display:flex;
+  float: right;
+  top: 1rem;
+  textarea{
+    position:relative;
+    top: 1rem;
+  }
+  .btn-submit{
+      position:relative;
+      background: $headerColor;
+      border: hidden;
+      font-family: $quickSand;
+      font-weight: bold;
+      top:2rem;
+      width: 40%;
+      left: 17rem;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .text-section{
+    position:relative;
+    font-family: $fontSerif;
+    color: white;
+    width: 40%;
+    text-align: left;
+    font-weight: bold;
+    h3{
+      font-size: 2rem;
+      font-family: $playfairFont;
+      color: $redColor;
+      font-weight: bold;
+      opacity: 90%;
+    }
+    h2{
+      position: relative;
+      font-size: 1rem;
+      font-family: $fontOne;
+      font-weight: bold;
+      opacity: 90%;
+      top: 1rem;
+    }
+  }
+  .total-area{
+    position:relative;
+    top:4rem;
+  }
+
+
+  /*footer section */
+
+#footer{
+  padding-bottom: 6rem;
+  position: relative;
+  @include centerItems();
+}
+.footer-btn{
+  @include footerBTN;
+  &:hover{
+    opacity: 80%;
+    color: $headerColor;
+  }
+}
+
+.ending-letters{
+  color: white;
+  position: relative;
+  left: 43%;
+  top: 5.5rem;
+}
+.footer-link{
+  @include footerIcon;
+  left: 40rem;
+  top: 4rem;
+}
+
+@media (max-width: 1028px) {
+
+/* title section */
+  #title{
+    padding-bottom: 30rem;
+  }
+
+  .hamburger{
+    background-color: $greyColor;
+    border-color: rgb(27,38,44);
+  }
+
+.heading{
+  position: relative;
+  transform: scale(1.4);
+  top: 20rem;
+}
+
+.resume-btn{
+  position: relative;
+margin-left: 1rem;
+top: 22rem;
+}
+.top-heading{
+  position: relative;
+  top: 15rem;
+  left: 35%;
+
+}
+.mid-heading{
+position: relative;
+top: 18rem;
+left: -2rem;
+}
+.bottom-heading{
+font-size: .8rem;
+}
+.profile-photo{
+  position: relative;
+  float: left;
+  right: -1rem;
+}
+
+
+/* skills section */
+
+#skills{
+padding-bottom: 18rem;
+}
+
+.skills-title{
+  position: relative;
+  left: 2rem;
+  top: -4rem;
+}
+
+.skill-column{
+position: relative;
+transform: scale(1.2);
+right: 110%;
+bottom: 4rem;
+ width: 50%;
+}
+
+
+.responsive-title{
+  top: 21rem;
+  left: 18rem;
+}
+.responsive-image{
+  position: relative;
+  left: 13rem;
+  top: 25rem;
+  transform: scale(1.2);
+}
+
+.card{
+  position: relative;
+  top: 22rem;
+  right: -5rem;
+  @include centerItems;
+  width: 60%;
+  height: 4rem;
+
+}
+
+.responsive-text{
+  text-align: center;
+  display: flex;
+  transform: scale(1.1);
+  top: 5px;
+  left: 10px;
+  width: 96%;
+}
+
+/* projects */
+
+#projects{
+}
+
+.project-column{
+  left: 7rem;
+}
+.project-photos{
+  transform: scale(0.9);
+}
+.projects-title{
+  transform: scale(1.2);
+  top: 5px;
+}
+
+.bottom-section{
+  left: -9rem;
+  top: 9rem;
+}
+.project-btn{
+  left: 6rem;
+  top: -4rem;
+}
+
+/* contact   */
+
+
+.text-section{
+  width: 50%;
+  text-align: center;
+}
+.btn-submit{
+  margin-left: -6.5rem;
+}
+
+/* footer */
+
+.footer-link{
+  margin-left: -8.5rem;
+}
+
+}
