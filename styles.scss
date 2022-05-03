@@ -1,3 +1,4 @@
+
 /* mixins */
 
 @mixin centerItems() {
@@ -646,8 +647,20 @@ padding-bottom: 20rem;
 
 .skills-title{
   position: relative;
-  left: 2rem;
+  left: 1rem;
   top: -7rem;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+.skills{
+  position: relative;
+  transform: scale(1.1);
+  left: 29rem;
+  top: 4rem;
 }
 
 .skill-column{
@@ -679,13 +692,14 @@ bottom: 7rem;
 
 
 .responsive-title{
-  top: 21rem;
-  left: 18rem;
+  top: 23rem;
+  left: 17rem;
+  font-size: 1.4rem;
 }
 .responsive-image{
   position: relative;
   left: 14rem;
-  top: 24rem;
+  top: 26rem;
   transform: scale(1.2);
 }
 
@@ -696,7 +710,7 @@ bottom: 7rem;
 
 .card{
   position: relative;
-  top: 22rem;
+  top: 23rem;
   right: -12rem;
   @include centerItems;
   width: 40%;
@@ -769,6 +783,14 @@ bottom: 7rem;
 
 .footer-link{
   margin-left: -8.5rem;
+}
+.fab{
+  position: relative;
+  left: -4rem;
+}
+.ending-letters{
+  position: relative;
+  left: 25rem;
 }
 
 }
