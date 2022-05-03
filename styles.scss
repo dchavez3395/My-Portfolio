@@ -272,7 +272,7 @@ html,body{
 }
 
 .responsive-title{
-  top: 6rem;
+  top: 6.5rem;
 }
 
 .skill-font{
@@ -305,7 +305,7 @@ html,body{
     font-family: $fontSerif, sans-serif;
     font-weight: lighter;
     font-size: 15px;
-    bottom: 0.4rem;
+    bottom: 0.6rem;
   }
 
 
@@ -325,7 +325,7 @@ html,body{
 .skills-title{
   color: white;
   position: relative;
-  left: 26.5rem;
+  left: 26rem;
   top: .8rem;
 }
 
@@ -347,7 +347,7 @@ html,body{
     font-weight: bold;
     position: relative;
     opacity: 80%;
-    left: 10%;
+    left: 1.5rem;
 
     &:hover a {
       opacity: 20%;
@@ -355,14 +355,13 @@ html,body{
     }
   }
 
-  img {
+  .img {
     position: relative;
     display: block;
     object-fit: contain;
     border-radius: 10%;
     max-width: 200%;
     width: 180%;
-
     height: 4.5rem;
     -webkit-backface-visibility: hidden;
     cursor: pointer;
@@ -371,6 +370,12 @@ html,body{
       transform: $scaleHover;
     }
   }
+}
+.skill-logo{
+  position: relative;
+  width: 190%;
+  margin-left: 2rem;
+  right: 1rem;
 }
 
 .intro-box{
@@ -681,7 +686,7 @@ bottom: 7rem;
   position: relative;
   width: 75%;
   left: -7rem;
-  top: 14rem;
+  top: 16rem;
 }
 
 .intro-left-text{
@@ -689,6 +694,7 @@ bottom: 7rem;
   text-align: center;
 
 }
+
 
 
 .responsive-title{
@@ -733,6 +739,11 @@ bottom: 7rem;
 #projects{
 }
 
+.projects-header{
+  position: relative;
+  top: 1rem;
+}
+
 .project-column{
   left: 7rem;
 }
@@ -766,6 +777,10 @@ bottom: 7rem;
 .project-btn{
   position: relative;
   left: 8rem;
+}
+.fas{
+  position: relative;
+  left: 1.3rem;
 }
 
 /* contact   */
