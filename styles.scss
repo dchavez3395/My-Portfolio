@@ -325,8 +325,8 @@ html,body{
 .skills-title{
   color: white;
   position: relative;
-  left: 26rem;
-  top: .8rem;
+  left: 28rem;
+  top: 1rem;
 }
 
 
@@ -342,18 +342,22 @@ html,body{
 
   .hide {
     color: white;
-    text-align: right;
     font-size: 0.8rem;
     font-weight: bold;
     position: relative;
     opacity: 80%;
-    left: 1.5rem;
-
+    left: 2rem;
+    display: flex;
     &:hover a {
       opacity: 20%;
       color: white;
     }
   }
+  .css{
+    position: relative;
+    left: 3rem;
+  }
+
 
   .img {
     position: relative;
@@ -371,6 +375,7 @@ html,body{
     }
   }
 }
+
 .skill-logo{
   position: relative;
   width: 190%;
@@ -412,6 +417,8 @@ html,body{
   bottom: .5rem;
 
 }
+
+
 /* projects */
 
 #projects{
@@ -809,4 +816,3 @@ bottom: 7rem;
 }
 
 }
-
