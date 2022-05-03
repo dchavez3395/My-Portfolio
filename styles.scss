@@ -50,7 +50,7 @@
   position: relative;
   align-items: center;
   text-align: center;
-  bottom: 2rem;
+  bottom: 1rem;
   &:after,
   &:before {
     content: '';
@@ -289,7 +289,7 @@ html,body{
   width: 35%;
   height: 4rem;
   right: 7rem;
-  top: 5rem;
+  top: 7rem;
   cursor: pointer;
   &:hover {
     transform: scale(1.05);
@@ -300,10 +300,10 @@ html,body{
   .responsive-text {
     position: relative;
     color: white;
-    text-align: center;
+    text-align: left;
     font-family: $fontSerif, sans-serif;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 15px;
     bottom: 0.4rem;
   }
 
@@ -324,7 +324,7 @@ html,body{
 .skills-title{
   color: white;
   position: relative;
-  left: 25.5rem;
+  left: 26.5rem;
   top: .8rem;
 }
 
@@ -383,7 +383,6 @@ html,body{
   display: flex;
   width: 50%;
   top:3rem;
-
 }
 
 .intro-left-text{
@@ -583,12 +582,12 @@ html,body{
 .ending-letters{
   color: white;
   position: relative;
-  left: 43%;
+  left: 44%;
   top: 5.5rem;
 }
 .footer-link{
   @include footerIcon;
-  left: 40rem;
+  left: 45rem;
   top: 4rem;
 }
 
@@ -612,9 +611,10 @@ html,body{
 
 .resume-btn{
   position: relative;
-margin-left: 1rem;
-top: 22rem;
+margin-left: .6rem;
+top: 11.5rem;
 }
+
 .top-heading{
   position: relative;
   top: 15rem;
@@ -639,21 +639,40 @@ font-size: .8rem;
 /* skills section */
 
 #skills{
-padding-bottom: 18rem;
+padding-bottom: 20rem;
 }
 
 .skills-title{
   position: relative;
   left: 2rem;
-  top: -4rem;
+  top: -7rem;
 }
 
 .skill-column{
 position: relative;
 transform: scale(1.2);
 right: 110%;
-bottom: 4rem;
+bottom: 7rem;
  width: 50%;
+}
+
+.responsive-intro{
+  position: relative;
+  top: 2rem;
+}
+
+
+.intro-box{
+  position: relative;
+  width: 75%;
+  left: -7rem;
+  top: 14rem;
+}
+
+.intro-left-text{
+  position: relative;
+  text-align: center;
+
 }
 
 
@@ -663,29 +682,35 @@ bottom: 4rem;
 }
 .responsive-image{
   position: relative;
-  left: 13rem;
-  top: 25rem;
+  left: 14rem;
+  top: 24rem;
   transform: scale(1.2);
+}
+
+.intro-middle-text{
+  position: relative;
+  font-weight: bolder;
 }
 
 .card{
   position: relative;
   top: 22rem;
-  right: -5rem;
+  right: -12rem;
   @include centerItems;
-  width: 60%;
-  height: 4rem;
+  width: 40%;
+  height: 6rem;
 
 }
 
 .responsive-text{
-  text-align: center;
+  text-align: left;
   display: flex;
   transform: scale(1.1);
   top: 5px;
   left: 10px;
   width: 96%;
 }
+
 
 /* projects */
 
@@ -698,18 +723,33 @@ bottom: 4rem;
 .project-photos{
   transform: scale(0.9);
 }
+
+.project-column .project-photos {
+    position: relative;
+    width: 65%;
+    height: 15rem;
+    border-radius: 5%;
+    margin: 3%;
+}
 .projects-title{
-  transform: scale(1.2);
+  transform: scale(1.4);
+  top: 7px;
+}
+.bottom-content-section{
+  display: flex;
+  position: relative;
   top: 5px;
 }
-
 .bottom-section{
-  left: -9rem;
-  top: 9rem;
+  position: relative;
+  left: -6rem;
+  width: 74%;
+  top: 6rem;
 }
+
 .project-btn{
-  left: 6rem;
-  top: -4rem;
+  position: relative;
+  left: 8rem;
 }
 
 /* contact   */
@@ -717,7 +757,7 @@ bottom: 4rem;
 
 .text-section{
   width: 50%;
-  text-align: center;
+  text-align: left;
 }
 .btn-submit{
   margin-left: -6.5rem;
