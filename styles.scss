@@ -383,7 +383,6 @@ html,body{
     height: 4.5rem;
     -webkit-backface-visibility: hidden;
     cursor: pointer;
-
     &:hover {
       transform: $scaleHover;
     }
@@ -395,6 +394,10 @@ html,body{
   width: 190%;
   margin-left: 2rem;
   right: 1rem;
+  &:hover {
+    transform: $scaleHover;
+  }
+
 }
 
 .intro-box{
