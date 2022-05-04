@@ -358,6 +358,20 @@ html,body{
     left: 3rem;
   }
 
+  .hide-bottom {
+    display: flex;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    opacity: 80%;
+    left: 2rem;
+}
+
+.jquery{
+  position: relative;
+  left: 1rem;
+}
 
   .img {
     position: relative;
