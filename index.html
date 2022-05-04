@@ -1,12 +1,17 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8">
-  <title>Maria & Stan</title>
+  <title>Daniel Chavez</title>
   <!-- CSS Stylesheets -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.min.css">
+  <link rel="stylesheet" href="styles.min.css">
+  <!--Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display:ital@1&family=Quicksand:wght@300&family=Raleway:ital,wght@0,200;0,300;1,200&family=Source+Serif+4:ital,wght@0,300;1,300;1,400;1,500&family=Ubuntu:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="favicon.ico">
   <!-- bootstrap script -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <!-- Font Awesome -->
@@ -15,254 +20,221 @@
 
 <body>
 
-  <!-- Nav Bar -->
-
-  <nav class=" navbar navbar-expand-lg navbar-light " id="nav-area">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img class="logo" src="images/logo.png" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger navbar-toggler-icon">
-          <img src="hamburger.png" alt="">
-        </span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto ">
-          <li class="nav-item">
-            <a class="nav-link active" style="color:#4D96FF;" aria-current="page" href="home.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:#4D96FF;" href="commercial.html">Commercial</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:#4D96FF;" href="construction.html">Construction</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color:#4D96FF;" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link"  style="color:#4D96FF;" href="contact.html" >Contact</a>
-          </li>
-
-        </ul>
-
-      </div>
-    </div>
-  </nav>
-
-  <section id="photo-carousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#photo-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#photo-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#photo-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active first-slide ">
-        <div class="top-header">
-          <h3 class="top-text header-text">Because you and your home deserve it.</h3>
-          <a href="contact.html" >
-            <button type="button" class="intro-btn btn btn-light btn-lg" name="button">Schedule your Clean now</button>
-          </a>
-        </div>
-      </div>
-      <div class="carousel-item second-slide ">
-        <div class="middle-header">
-          <h3 class="middle-text header-text">Running a business is hard, keeping it clean shouldn't be</h3>
-          <a href="contact.html">
-            <button type="button" class="intro-btn btn-two btn btn-light btn-lg"  name="button">Schedule your Clean now</button>
-          </a>
-        </div>
-      </div>
-      <div class="carousel-item third-slide">
-        <div class="bottom-header">
-          <h3 class="bottom-text header-text">We can help keep your jobsite clean.</h3>
-          <a href="contact.html">
-            <button type="button" class="intro-btn btn btn-light btn-lg"  name="button">Schedule your Clean now</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- services -->
-
-  <section class="white-section" id="features">
-    <div class="white-content container-fluid">
-      <div class="feature-intro">
-        <h2 class="feature-text">How Does It work?</h2>
-      </div>
-      <div class=" white-middle row">
-        <div class="feature-box col-md-4">
-          <img class="icon" src="images/booking.png" />
-          <h2 class="feature-title">Book</h2>
-          <p class="feauture-bottom-text">Get in touch and book your estimate</p>
-        </div>
-        <div class="feature-box middle-box col-md-4">
-          <img class="icon" src="images/clean-house.png" />
-          <h2 class="feature-title">Clean</h2>
-          <p class="feauture-bottom-text">One of our qualified cleaners comes and gives your place a professional cleaning.</p>
-        </div>
-        <div class="feature-box col-md-4">
-          <img class="icon" src="images/relax.png" />
-          <h2 class="feature-title">enjoy</h2>
-          <p class="feauture-bottom-text">Sit back and focus on what's important.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Offered -->
-  <section class="colored-section" id="services">
+  <section class="grey-section" id="title">
     <div class="container-fluid">
-      <h3 class="services-title">Give Your House A Deep Clean
-      </h3>
-      <!-- card column -->
-      <div class="row service-row">
-        <div class=" col-md-4 ">
-          <div class="service-card card mb-4" style="width: 14rem;">
-            <img class="card-image" src="images/commercial-stock1.jpg" class="" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Janitorial Service</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div class=" col-md-4 ">
-          <div class="service-card card mb-4" style="width: 14rem;">
-            <img class="card-image" src="https://embassycleaners.com/wp-content/uploads/2019/04/carpet-cleaning.jpeg" class="" alt="">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Carpet Cleaning</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div class=" col-md-4 ">
-          <div class="service-card card mb-4" style="width: 14rem;">
-            <img class="card-image" src="https://mop8.ca/wp-content/uploads/2021/11/5fb7e1d0b18faf001c7308a4.jpg" class="" alt="">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Construction Cleaning</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- bottom row column -->
-      <div class="row service-row">
-        <div class=" col-md-4 ">
-          <div class="service-card card mb-4" style="width: 14rem;">
-            <img class="card-image" src="https://t3.ftcdn.net/jpg/01/98/28/88/360_F_198288810_n9JlsulqvkjbWgA2I1keXHv1wh5KTGe6.jpg" class="" alt="">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Window Cleaning</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div class=" col-md-4 ">
-          <div class="service-card card mb-4" style="width: 14rem;">
-            <img class="card-image" src="https://zumpermedia.s3.amazonaws.com/blog/wp-content/uploads/2018/03/27125909/the-move-out-clean-out.jpg" class="" alt="">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Move In/Out</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-        <div class=" col-md-4 ">
-          <div class="service-card card mb-4" style="width: 14rem;">
-            <img class="card-image" src="https://loveincorporated.blob.core.windows.net/contentimages/gallery/c29f320a-890d-4a2c-b561-64e1118f5701-interior-design-ideas-thoroughfares-Abode.jpg" class="" alt="">
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Property Management</h5>
-              <p class="card-text"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="image-section" id="choose-us">
-    <div class="container-fluid choose-container">
-      <h3 class="choose-header">Why Choose Us?</h3>
-      <div class="choose-row row">
-        <div class="why-column col-lg-4">
-          <div class="choose-icons top-icon-left">
-            <img class="icon-2" src="images/time.png" />
-            <h2 class="icon-title">Saves You Time</h2>
-            <p class="icon-text">Let us take care of the cleaning while you take care of what really matters.</p>
-          </div>
-          <div class="choose-icons top-icon-mid">
-            <img class="icon-2" src="images/safety.png" />
-            <h2 class="icon-title">Safety First</h2>
-            <p class="icon-text">The safety and well-being of your belongings is our #1 priority.</p>
-          </div>
-          <div class="choose-icons top-icon-right">
-            <img class="icon-2" src="images/award.png" />
-            <h2 class="icon-title">the best Quality</h2>
-            <p class="icon-text">We offer only the best quality with every clean</p>
-          </div>
-        </div>
-      </div>
 
-      <div class="choose-row row bottom-row">
-        <div class="bottom-column col-lg-4">
-          <div class="choose-icons left-icon">
-            <img class="icon-2" src="images/book.png" />
-            <h2 class="icon-title">Online Booking</h2>
-            <p class="icon-text left-text">With online booking, it's never been easier to book your clean.</p>
-          </div>
-          <div class="choose-icons middle-icon">
-            <img class="icon-2" src="images/schedule.png" />
-            <h2 class="icon-title">Flexible Scheduling</h2>
-            <p class="icon-text">Days or evenings, We are available when you need us.</p>
-          </div>
-          <div class="choose-icons right-icon">
-            <img class="icon-2" src="images/wallet.png" />
-            <h2 class="icon-title">Cash-free Payment</h2>
-            <p class="icon-text">Pay securely online with Interact, Paypal, or Bitcoin.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Nav Bar -->
+      <!-- make sticky header later -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand navbar-light brand-color" href="">
+          <!--  <img class="brand-logo"src="images/daniel.logo.png" alt="Daniel Chavez">-->Daniel Chavez
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+           <i class="fas fa-bars" style="color:#FEC260"></i>
+        </button>
+        <div class="collapse navbar-collapse navbar-light" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-items">
+              <a class="nav-link" href="#skills"> Skills</a>
+            </li>
+            <li class="nav-items">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-items">
+              <a class="nav-link" href="#contact">Contact </a>
+            </li>
 
-  <section id="break">
-    <div class="container-fluid">
-      <div class="box">
-        <h3 class="box-text">Schedule your cleaning</h3>
-        <div class="range-bar">
-          <h2 class="range-title">Bedrooms</h2>
-          <span class="range-value" id="range-value">2</span>
-          <input type="range" min="0" max="4" value="2" id="slider">
+          </ul>
         </div>
-        <div class="range-bar">
-          <h2 class="range-title">Bathrooms</h2>
-          <span class="range-value" id="range-value2">2</span>
-          <input type="range" min="0" max="4" value="2" id="slider2">
+      </nav>
+
+
+      <!-- Title -->
+
+      <div class="container px-4 top-section">
+        <div class="row heading-row  gx-5">
+          <div class="heading-column col-lg-6">
+            <h2 class="top-heading heading">Hello, I'm Daniel</h2>
+            <h3 class="mid-heading animate heading">I make Websites.</h3>
+            <h3 class="hidden-heading heading">I'm a programmer.</h3>
+            <h1 class="bottom-heading heading">I'm a Winnipeg based developer, I'm passionate about tech, and building websites </h1>
+          </div>
         </div>
-        <a   href="contact.html" name="button">
-          <button class='break-btn btn btn-light btn-lg'>BOOK NOW </button>
+        <div class="col-lg-6">
+          <img class="profile-photo" src="images/daniel.jpg" alt="profile-photo">
+        </div>
+        <a class="resume-btn" href="resume.pdf" target="_blank">
+          <button type="button" class="btn resume-btn btn-light btn-lg" >Download Resume</button>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="footer">
-    <div class=" footer-content container-fluid">
-      <div class="right-content">
-        <img class="bottom-logo" src="images/logo2.png" alt="">
-        <p class="footer-text">We are a family-based business with years of experience cleaning homes and businessess in the Brandon area, and we can't wait to help you keep your place clean!</p>
+
+
+  <!-- skills -->
+  <section class="blue-section" id="skills">
+    <div class="container-inside container-fluid">
+      <div class="skills-intro">
+        <h3 class="skills-header">My skills</h3>
       </div>
-      <div class="pay-row row">
-        <img class="pay-image" src="images/visa.png" alt="">
-        <img class="pay-image" src="images/mastercard.png" alt="">
-        <img class="pay-image " src="images/paypal.png" alt="">
-        <img class="pay-image" src="images/bitcoin.png" alt="">
+      <div class="responsive-intro">
+        <h2 class="responsive-title responsive skill-font ">Responsive Design</h2>
+        <div class="row">
+          <div class="col">
+            <img class="responsive-image" src="images/responsive.png" alt="responsive-image">
+            <div class="card">
+              <div class=" card-body responsive-card">
+                <h1 class="responsive-bottom responsive-text">Most of us browse the web on our phones, so why not make sure your site works and looks great on any device?</h1>
+              </div>
+            </div>
+            <!--skills list -->
+            <div class="skill-intro">
+              <h2 class="skills-title skill-font">What I love</h2>
+            </div>
+            <div class="skills row">
+              <div class="skill-column top-column col-md-4 col-sm">
+                <h2 class="hide">HTML</h2>
+                <a class="skill-logo" >
+                  <img class="skill-logo " src="images/html.png" alt="html">
+                </a>
+                <h2 class="hide css">CSS</h2>
+                <a class="skill-logo" >
+                  <img class="skill-logo big-logo" src="images/css.png" alt="css">
+                </a>
+                <h2 class="hide">JavaScript</h2>
+                <a class="skill-logo" >
+                  <img class="skill-logo" src="images/javascript.png" alt="JavaScript">
+                </a>
+              </div>
+              <div class="skill-column bottom-column col-md-4 col-sm">
+                <h2 class="hide-bottom">Sass</h2>
+                <a class="skill-logo" >
+                  <img class="skill-logo small-logo" src="images/sass.png" alt="sass">
+                </a>
+                <h2 class="hide-bottom">Bootstrap</h2>
+                <a class="skill-logo" >
+                  <img class="skill-logo big-logo" src="images/bootstrap.png" alt="css">
+                </a>
+                <h2 class="hide-bottom jquery">jQuery</h2>
+
+                <a class="skill-logo" >
+                  <img class="skill-logo" src="images/jquery.png" alt="">
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intro-box ">
+      <h3 class="intro-left-text ">Hi, I'm Daniel. Nice to meet you.</h3>
+      <h2 class="intro-middle-text">I'm a programmer, coffee, and Music lover. When I'm not Photoshopping my cat into Marvel posters, I'm usually writting code, trying to learn every day and loving every minute of it.</h2>
+
+    </div>
+
+  </section>
+
+  <!--projects -->
+
+  <section class="grey-section" id="projects">
+    <div class="container-fluid">
+      <h2 class=" projects-header">My Projects</h2>
+
+      <div class="projects">
+        <div class="row">
+          <div class="project-column col-lg-4">
+            <a href="https://dchavez3395.github.io/Cleaning-Website/" target="_blank">
+              <h2 class="maria-title projects-title">Maria & Stan Cleaning Services</h2>
+              <img class="project-photos" src="images/mariacleaning.png" alt="Tinder for Dogs">
+            </a>
+          </div>
+
+          <div class="project-column col-lg-4">
+            <a href="https://dchavez3395.github.io/Simon-Says-Game/"  target="_blank">
+              <h2 class="projects-title">Simon Says</h2>
+              <img class="project-photos simson-says" src="images/Simonsays.png" alt="Simon-says-game">
+            </a>
+          </div>
+          <div class="project-column col-lg-4">
+            <a href="https://dchavez3395.github.io/Tindog/"  target="_blank">
+              <h2 class="projects-title">Tindog - Tinder for dogs</h2>
+              <img class="project-photos" src="images/Tindog.png" alt="Tinder for Dogs">
+              <img  class="noshow" src="images/simon-says.gif" alt="">
+
+            </a>
+          </div>
+          <div class="project-column col-lg-4 ">
+            <a href="https://dchavez3395.github.io/Drumkit-Game/" target="_blank">
+              <h2 class="projects-title drum-title">Drumkit Game</h2>
+              <img class="project-photos" src="images/drumkit-game.png" alt="Drumkit-game-photo">
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="bottom-section">
+      <div class="bottom-content-section">
+        <h3 class="bottom-left-text">Start a project</h3>
+        <h2 class="bottom-middle-text">Interested in working together? Let's have a chat.</h2>
+        <a href="mailto:dchavez3395@gmail.com">
+          <button type="button" class="btn project-btn btn-light btn-lg" >Let's do this.</button>
+        </a>
+      </div>
+
+    </div>
+
+
+  </section>
+  <!--contact -->
+  <section class="blue-section" id="contact">
+    <div class="container-fluid">
+      <h2 class="contact-title">Get in touch</h2>
+    <!--<a type="button" class="btn btn-light" href="mailto:dchavez3395@gmail.com"><i class="far fa-envelope"></i>    EMAIL</a> -->
+    <div class="total-area">
+      <form class="row cta" action="https://formspree.io/f/mknypqzv" method="post">
+        <div class="col-md-6">
+          <input type="name" class="form-control" id="inputName" placeholder="Name">
+        </div>
+        <div class="col-md-6">
+          <input type="name" class="form-control" id="inputName" placeholder="Enter email">
+        </div>
+        <div class="col-md-12">
+          <textarea class="form-control" rows="7" cols="50" name="message"></textarea>
+          <button type="submit" class="btn-submit  btn btn-lg btn-outline-ligtht">Submit</button>
+        </div>
+        <div>
+        </div>
+      </form>
+
+
+      <div class="text-section">
+        <h3 class="text-top">I want to hear from you.</h3>
+        <h2 class="text-bottom">I come from a sales background, so I know that precentation is key when engaging with clients. If you are looking for functional, beautiful looking websites to further engage with your clientele, I think I'm your guy.</h2>
+        <h2>Work ethic and dedication have been at the forefront of every project I've been a part of, and I want to take those principles to your business. Shoot me an email and lets get to work.</h2>
       </div>
     </div>
   </section>
+
+  <!--footer -->
+  <section class="grey-section" id="footer">
+    <div class="bottom-container">
+      <a class="footer-btn" href="#title"><i class="fas fa-angle-double-up"></i></a>
+      <a class="footer-link icons" href="https://www.linkedin.com/in/danielchavez2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a class="footer-link icons" href="https://github.com/dchavez3395" target="_blank"><i class="fab fa-github"></i></a>
+      <a class="footer-link icons" href="https://www.instagram.com/theycallmedaniel_/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <p class="ending-letters">© 2022 Daniel Chavez.</p>
+    </div>
+  </section>
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="index.js" charset="utf-8"></script>
-
 </body>
 
 </html>
