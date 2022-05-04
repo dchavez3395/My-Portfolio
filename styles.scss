@@ -560,7 +560,7 @@ html,body{
       font-weight: bold;
       top:2rem;
       width: 40%;
-      left: 17rem;
+      left: 19rem;
       &:hover{
         transform: scale(1.1);
       }
@@ -688,7 +688,7 @@ padding-bottom: 20rem;
 .skills{
   position: relative;
   transform: scale(1.1);
-  left: 29rem;
+  left: 26rem;
   top: 4rem;
 }
 
@@ -740,7 +740,7 @@ bottom: 7rem;
 
 .card{
   position: relative;
-  top: 23rem;
+  top: 23.5rem;
   right: -12rem;
   @include centerItems;
   width: 40%;
