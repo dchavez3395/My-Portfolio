@@ -32,6 +32,9 @@ $lightGrey: #73777B;
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 50px;
+  a{
+    cursor: pointer;
+  }
 }
 
 #navbar-logo {
@@ -46,7 +49,17 @@ $lightGrey: #73777B;
   text-decoration: none;
   font-size: 2.5rem;
   font-family: 'Water Brush', cursive;
-  width: 50%;
+  width: 120%;
+  max-width: 1000px;
+}
+
+.nav-logo{
+  position: relative;
+  width: fit-content;
+  margin-top: 2px;
+
+
+
 }
 
 .navbar-menu {
@@ -481,10 +494,9 @@ $lightGrey: #73777B;
   border: hidden;
   font-weight: bold;
   height: auto;
-  right: 12.5rem;
+  right: 13.1rem;
   bottom: 1.5rem;
   transition: box-shadow 0.2s ease-in-out;
-
   &:hover {
     transform: scale(1.2);
     transition: box-shadow 0.2s ease-in-out;
@@ -509,8 +521,10 @@ $lightGrey: #73777B;
   text-decoration: none;
   font-size: 2.5rem;
   font-family: 'Water Brush', cursive;
-
+  right: 2rem;
   a {
+    position: relative;
+    right: 5rem;
     cursor: pointer;
 
     &:hover {
@@ -578,11 +592,19 @@ $lightGrey: #73777B;
   width: 240px;
 }
 
+.fa-brands{
+  position: relative;
+  margin-left: 4rem;
+}
+
 .website-rights {
   color: $yellowColor;
   margin-top: 2%;
+  margin-left: 5%;
 }
 @media (max-width: 1028px) {
+
+
   .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -617,7 +639,8 @@ $lightGrey: #73777B;
   }
 
   #navbar-logo {
-    padding-left: 25px;
+    padding-left: 4rem;
+    padding-top: 8px;
   }
 
   .navbar-item {
@@ -669,7 +692,9 @@ $lightGrey: #73777B;
     display: grid;
   }
   //Hero section //
-  #home {}
+  #home {
+    padding-bottom: 35rem;
+  }
 
   .hero-mid {
     font-size: 5.5rem;
@@ -677,7 +702,7 @@ $lightGrey: #73777B;
 
   .hero-container {
     position: relative;
-    top: 3rem;
+    top: 17rem;
   }
 
   .hero-description {
@@ -729,5 +754,38 @@ $lightGrey: #73777B;
 
   .text-form {
     margin: 10% auto auto;
+  }
+
+  .btn-submit{
+    position: relative;
+    right: 12.5rem;
+  }
+
+
+  //Footer//
+
+
+  #footer{
+    padding-bottom: -1rem;
+  }
+
+
+  .social-media-wrap{
+    position: relative;
+    padding-top: 5%;
+    margin: auto;
+    
+  }
+
+  .footer-logo{
+    margin: auto;
+  }
+
+  .website-rights{
+    position: relative;
+    right: 5rem;
+  }
+
+  .social-icons{
   }
 }
