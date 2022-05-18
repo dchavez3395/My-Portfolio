@@ -13,6 +13,8 @@ $lightGrey: #73777B;
   scroll-behavior: smooth;
 }
 
+
+
 .navbar {
   background: #131313;
   height: 88px;
@@ -184,10 +186,9 @@ $lightGrey: #73777B;
 
 .main-btn {
   font-size: 1.8rem;
-  background: #C6FFDD;
-  background: #C6FFDD;
-  background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
-  background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+  background: #f7ff00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #db36a4, #f7ff00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   text-decoration: none;
   padding: 20px 60px;
   border: none;
@@ -684,13 +685,11 @@ $lightGrey: #73777B;
     transform: translateY(-8px) rotateX(-45deg);
   }
 
-  #signup:hover {
-    transform: scale(1.1);
-  }
 
   .skillset {
     display: grid;
   }
+
   //Hero section //
   #home {
     padding-bottom: 35rem;
@@ -774,7 +773,7 @@ $lightGrey: #73777B;
     position: relative;
     padding-top: 5%;
     margin: auto;
-    
+
   }
 
   .footer-logo{
@@ -788,4 +787,13 @@ $lightGrey: #73777B;
 
   .social-icons{
   }
+
+
+
+
+
+
+
+
+
 }
