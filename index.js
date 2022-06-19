@@ -1,11 +1,11 @@
 
 //preloader
 
-const loader = document.getElementById('preloader');
-
-window.addEventListener('load', function(){
-  loader.style.visibility = 'hidden';
+$(window).on('load',function(){
+  $('.preloader').addClass('complete')
 });
+
+
 
 // sticky nav
 $(document).ready(function() {
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     // adds the highlight to menu item//
 
-    if (window.innerWidth > 960 && scrollPos < 500) {
+    if (window.innerWidth > 940 && scrollPos < 500) {
       homeMenu.classList.add('highlight');
       aboutMenu.classList.remove('highlight');
 
@@ -58,17 +58,17 @@ $(document).ready(function() {
       homeMenu.classList.remove('highlight');
       skillsMenu.classList.remove('highlight');
       return;
-    } else if (window.innerWidth > 960 && scrollPos < 1600) {
+    } else if (window.innerWidth > 960 && scrollPos < 1300) {
       skillsMenu.classList.add('highlight');
       aboutMenu.classList.remove('highlight');
       projectsMenu.classList.remove('highlight')
       return;
-    }else if(window.innerWidth > 960 && scrollPos < 2500){
+    }else if(window.innerWidth > 960 && scrollPos < 2100){
       projectsMenu.classList.add('highlight');
       skillsMenu.classList.remove('highlight');
       contactMenu.classList.remove('highlight')
       return;
-    } else if (window.innerWidth > 960 && scrollPos < 3800) {
+    } else if (window.innerWidth > 960 && scrollPos < 3500) {
       contactMenu.classList.add('highlight');
       projectsMenu.classList.remove('highlight');
       return;
