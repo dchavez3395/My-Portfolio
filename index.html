@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Daniel Chavez</title>
   <!-- CSS Styles -->
-  <link rel="stylesheet" href="styles.min.css">
+  <link rel="stylesheet" href="styless.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!--Bootstrap -->
   <link rel="stylesheet" href="lib/css/bootstrap.min.css">
@@ -18,6 +18,7 @@
 
 <body>
   <!-- pre-loader -->
+
   <div class="preloader">
     <div class="circle"></div>
   </div>
@@ -29,9 +30,7 @@
         <a href="#home" id="navbar-logo">Daniel</a>
       </div>
       <div class="navbar-toggle" id="mobile-menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <div id="menu-btn" class="fas fa-bars"></div>
         </div>
       <ul class="navbar-menu">
         <li class="navbar-item">
@@ -79,7 +78,7 @@
           <h4>Hola! <span style="color:#E96F85"></span>I'm Daniel</h4>
           <p data-aos="fade-down">Thanks for checking out my Portfolio. I'm a Salvadoran Front End Developer from Manitoba, I have years of experience with client work, and negotiating complex issues.</p>
           <p data-aos="fade-up">I am a <span class="udemy">Udemy</span> graduate, with experience writing code, building and mainting sites in WordPress and more. This has allowed me to earn a strong foundation for web development and the skillset for building complex solutions.</p>
-          <p data-aos="fade-down">I spend most of my free time <span class="crossed">Dying</span> <span class="dying-red">playing</span> Elden Ring, playing with my cat, or reading. Feel free to send me your book recommendations!</p>
+          <p data-aos="fade-down">I spend most of my free time <span class="crossed">playing</span> <span class="dying-red">dying</span> on Elden Ring, playing with my cat, or reading. Feel free to send me your book recommendations!</p>
           <p data-aos="fade-up">I am looking to work with people that empower and challenge their employees to be the best professionals they can be.</p>
         </div>
       </div>
@@ -133,97 +132,61 @@
   </section>
 
   <!-- Projects -->
-
-  <section class="projects-class bg-sec r-p" id="projects-id">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col">
-          <div class="col" data-aos="fade-up">
-            <h2>Projects</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="box" data-aos="fade-down">
-            <img class="project-photos" src="images/grocery.png" alt="Maria & Stan Cleaning">
-            <div class="info">
-              <h2>Online Grocery store</h2>
-              <p>Website I worked on showcasing an online grocery store.</p>
-               <a href="https://dchavez3395.github.io/Grocery-Website/" target="_blank">
-                <button>view</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="box" data-aos="fade-up">
-            <img class="project-photos" src="images/ecommerce.png" alt="Drumkit-game-photo">
-            <div class="info">
-              <h2>eCommerce Website</h2>
-              <p>Fun eCommerce website with Sass and vanilla Javascript.</p>
-              <a href="https://dchavez3395.github.io/eCommerce-Website/" target="_blank">
-                <button>view</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="box" data-aos="fade-up">
-            <img class="project-photos" src="images/fitness.png" alt="Tinder for Dogs">
-            <div class="info">
-              <h2>FIT IN - Fitness website</h2>
-              <p>Fitness project I woked on showcasing fitness content. </p>
-              <a href="https://dchavez3395.github.io/Fitness-Website/" target="_blank">
-                <button>view</button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="box" data-aos="fade-down">
-            <img class="project-photos" src="images/restaurant.png" alt="colors.com">
-            <div class="info">
-              <h2>Restaurant</h2>
-              <p>Restaurant layout I worked on for pontential Restaurants.</p>
-              <a href="https://dchavez3395.github.io/Restaurant-website/" target="_blank">
-                <button>view</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="box" data-aos="fade-up">
-            <img class="project-photos" src="images/COLORS.png" alt="colors.com">
-            <div class="info">
-              <h2>COLORS</h2>
-              <p>Website layout I worked on showcasing different color gradients.</p>
-              <a href="https://dchavez3395.github.io/Colors/" target="_blank">
-                <button>view</button>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="box" data-aos="fade-down">
-            <img class="project-photos simson-says" src="images/Simonsays.png" alt="Simon-says-game">
-            <div class="info">
-              <h2>Simon Says</h2>
-              <p>Simon Says Game coded primarily with jQuery.</p>
-              <a href="https://dchavez3395.github.io/Simon-Says-Game/" target="_blank">
-                <button>view</button>
-              </a>
-            </div>
-          </div>
+<section class="portfolio py-5" id="portfolio">
+  <div class="container-lg py-4">
+    <div class="row justify-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2 class="fw-bold mb-5">Latest Projects</h2>
         </div>
       </div>
     </div>
-  </section>
-
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-1.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Fitness Website</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-2.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">eCommerce Website</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-3.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Online Grocery Store</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-4.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Restaurant Website</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-5.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Color Gradient Website</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-6.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Simon Says Game</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   <!-- Hire me -->
