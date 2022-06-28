@@ -1,614 +1,265 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300&family=Nunito:ital,wght@0,300;0,400;0,500;1,300&family=Water+Brush&display=swap');
-@mixin button() {
-  outline: none;
-  boder: none;
-  border-radius: 5rem;
-  color: #333;
-  background: white;
-  overflow: hidden;
-  font-size: 1.6rem;
-  font-weight: bold;
-  text-transform: capitalize;
-  letter-spacing: 0.2rem;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: $lightRed;
-    height: 100%;
-    width: 0;
-    transition: 0.2s;
-    z-index: -1;
-  }
-
-  &:hover::before {
-    width: 100%;
-  }
-}
-$lightRed: #EE8683;
-
-* {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-}
-
-p {
-  font-family: 'Nunito', sans-serif;
-  font-size: 20px;
-  line-height: 30px;
-  color: #6c757d;
-}
-
-.r-p {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.bg-sec {
-  background: #F8F9FA;
-}
-
-.r-btn {
-  padding: 5px 20px;
-  background-color: $lightRed !important;
-  box-shadow: 0 0 0.2rem #333;
-
-  &:hover {
-    transform: scale(1.07);
-    transition: 0.5s all ease-in-out;
-    box-shadow: 0 1px 8px 3px rgba(0,0,0,0.5);
-  }
-}
-
-
-/* pre-loader */
-
-.preloader{
-
-  .circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 10px solid rgba(255, 255, 255, 0.1);
-    border-top: 10px solid #ee8683;
-    animation: animate 1.5s infinite linear;
-    z-index: 99999;
-  }
-
-  &:before{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50% !important;
-    background-color: #000;
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 50% !important;
-    background-color: #000;
-  }
-
-  .complete{
-    &:before {
-      bottom: -50%;
-    }
-
-    &:after {
-      top: -50%;
-    }
-  }
-}
-
-.preloader.complete{
-  visibility: hidden;
-}
-
-@keyframes animate {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
-
-/* nav */
-
-
-.navbar {
-  background: transparent;
-  height: 88px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  top: 0;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 50px;
-  a{
-    cursor: pointer;
-  }
-}
-
-#navbar-logo {
-  background-color: $lightRed;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fil-color: transparent;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 3rem;
-  font-family: 'Water Brush', cursive;
-  width: 120%;
-  max-width: 1000px;
-}
-
-.nav-logo{
-  position: relative;
-  width: fit-content;
-  margin-top: 1%;
-  font-weight: 600;
-}
-
-.navbar-menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.navbar-item {
-  height: 80px;
-}
-
-.navbar-links {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 125px;
-  text-decoration: none;
-  height: 100%;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  &:hover {
-    color: $lightRed;
-    transition: all 0.3s ease;
-  }
-}
-
-.navbar-link {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 125px;
-  text-decoration: none;
-  height: 100%;
-
-  transition: all 0.3s ease;
-  &:hover {
-    color: $lightRed;
-    transition: all 0.3s ease;
-  }
-}
-
-#menu-btn{
-   display: none;
-   font-size: 2.5rem;
-   cursor: pointer;
-   color:$lightRed;
-}
-
-.highlight {
-  border-bottom: 4px solid rgb(238,134,131);
-}
-
-.stickyadd{
-  background: #fff !important;
-  padding: 15px 0;
-  box-shadow: 0 1px 8px 3px rgba(0,0,0,0.5);
-  transition: 0.5s all ease-in-out;
-
-  a{
-      color: black;
-  }
-}
-
-/*Header Section */
-header {
-  height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)) ,url('images/background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.header-content {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.content-box {
-  max-width: 700px;
-  color: #fff;
-
-  h4 {
-    font-size: 30px;
-  }
-
-  h1 {
-    font-size: 52px;
-
-    span{
-      color: $lightRed;
-    }
-  }
-
-  p{
-    color: #839AA8;
-  }
-
-  a {
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #fff;
-    padding: 5px 25px;
-
-    &:hover {
-      color: #000;
-      background: #fff;
-      transition: 0.5s all;
-    }
-  }
-}
-/* About */
-
-#about{
-overflow: hidden;
-  .about-column{
-  h2,h4{
-
-  }
-    h2{
-      padding-bottom: 2%;
-    }
-    p{
-      width: 80%;
-      .crossed {
-        text-decoration: line-through;
-      }
-
-      .dying-red {
-        color: #F15412;
-      }
-      .udemy{
-        color: $lightRed;
-        font-weight: 600;
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-
-
-/* Experience Section */
-.exp-class .progress {
-  height: 10px;
-  border-radius: 20px;
-  font-size: 10px;
-}
-
-.progress-bar {
-  background-color: $lightRed !important;
-}
-
-.exp-class label {
-  font-size: 20px;
-  margin: 10px;
-}
-// Projects
-.box {
-  height: 15rem;
-  width: 25rem;
-  border-radius: 0.5rem;
-  margin: 2rem;
-  cursor: pointer;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 0 0.5rem #333;
-  margin: 5% auto;
-
-  img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(51,51,51,.6);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    color: #fff;
-    transform: scale(0);
-
-    h2 {
-      margin-top: 5%;
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.3rem;
-      border-bottom: 0.2rem solid $lightRed;
-      border-top: 0.2rem solid $lightRed;
-      margin: 1rem 2rem;
-      color: white;
-    }
-
-    a {
-      transform: scale(.7);
-
-      button {
-        @include button();
-        height: 4rem;
-        width: 14rem;
-        position: relative;
-        bottom: 0.7rem;
-      }
-    }
-  }
-
-  &:hover .info {
-    transform: scale(1);
-  }
-}
-/*Contact */
-.contact-title {
-  margin-left: 45%;
-  margin-bottom: 5%;
-}
-
-.text-section {
-  width: 85%;
-  margin-top: 20%;
-  margin-left: 6%;
-  grid-column-gap: 50px;
-
-  h3{
-    font-size: 2rem;
-  }
-
-  h2 {
-    margin-top: 5%;
-    font-size: 1.5rem;
-  }
-}
-
-form {
-  background: #fff;
-  padding-top: 2rem;
-  margin: 1rem 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.5rem #333;
-  width: 90% !important;
-
-  .inputBox {
-    position: relative;
-    text-align: center;
-
-    input,
-    textarea {
-      outline: none;
-      border: 0.2rem solid #333;
-      border-radius: 0.2rem;
-      margin: 2rem 0;
-      padding: 0 1rem;
-      background: none;
-      height: 4rem;
-      width: 90%;
-      font-size: 2rem;
-
-      &:focus ~ h3,
-      &:valid ~ h3 {
-        font-size: 1.6rem;
-        left: 6%;
-        top: -.5rem;
-        color: $lightRed;
-        transition: 0.3s  ease-in-out;
-      }
-    }
-
-    textarea {
-      padding: 1rem;
-      resize: none;
-      height: 23rem;
-    }
-
-    h3 {
-      position: absolute;
-      top: 3rem;
-      left: 7%;
-    }
-  }
-
-  input[type='submit'] {
-    @include button();
-    height: 4rem;
-    width: 12rem;
-    margin-bottom: 2rem;
-    margin-left: 4%;
-    background: $lightRed;
-    color: #fff;
-    &:hover{
-      transform: scale(1.05);
-      transition: 0.3s all ease-in-out;
-    }
-
-  }
-}
-
-/* footer */
-
-footer{
-  height: 200px;
-  background-color: #333333;
-
-  .r-icon{
-    a{
-      font-size: 25px;
-      color: #848484;
-      padding: 10px;
-      border-radius: 50%;
-      &:hover{
-        color: $lightRed;
-        transition: .5s all;
-      }
-    }
-  }
-}
-
-
-@media (max-width: 1028px) {
-
-
-  #menu-btn{
-    display: inline-block;
-
-    &.fa-times{
-      transform: rotate(180deg);
-    }
-  }
-
-
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    padding: 0;
-  }
-
-  .navbar-menu {
-    display: grid;
-    grid-template-columns: auto;
-    margin: 0;
-    width: 100%;
-    position: absolute;
-    top: -1000px;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: -1;
-    background: white;
-  }
-
-  .navbar-menu.active {
-    background: white;
-    top: 100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 99;
-    height: 60vh;
-  a{
-    color: black;
-    font-size: 1.6rem;
-  }
-  }
-
-  #navbar-logo {
-    padding-left: 4rem;
-  }
-
-  .navbar-item {
-    width: 100%;
-  }
-
-  .navbar-links {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-    font-size: 1.6rem;
-  }
-
-  #mobile-menu {
-    position: absolute;
-    top: 20%;
-    right: 5%;
-    transform: translate(5%, 20%);
-  }
-
-  .navbar-toggle .bar {
-    width: 38px;
-    height: 4.5px;
-    margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background: $lightRed;
-    display: block;
-    cursor: pointer;
-  }
-
-  #mobile-menu.is-active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  #mobile-menu.is-active .bar:nth-child(1) {
-    transform: translateY(9px) rotateX(45deg);
-  }
-
-  #mobile-menu.is-active .bar:nth-child(3) {
-    transform: translateY(-9px) rotateX(-45deg);
-  }
-
-}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Daniel Chavez</title>
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="styless.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!--Bootstrap -->
+  <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous"
+    referrerpolicy="no-referrer">
+  <!-- favicon -->
+  <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+  <!-- pre-loader -->
+
+  <div class="preloader">
+    <div class="circle"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar sticky fixed-top">
+    <div class="navbar-container">
+      <div class="nav-logo">
+        <a href="#home" id="navbar-logo">Daniel</a>
+      </div>
+      <div class="navbar-toggle" id="mobile-menu">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+      <ul class="navbar-menu">
+        <li class="navbar-item">
+          <a href="#home" class="navbar-links" id="home-page">Home</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#about" class="navbar-links" id="about-page">About</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#exp-id" class="navbar-links" id="skills-page">Skills</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#projects-id" class="navbar-links" id="projects-page">Projects</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#contact-id" class="navbar-links" id="contact-page">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- home -->
+  <header id="home">
+    <div class="container-fluid header-content">
+      <div class="row">
+        <div class="col text-center">
+          <div class="content-box" data-aos="fade-up">
+            <h4>Welcome</h4>
+            <h1>I'm <span class="element"></span></h1>
+            <p>I am a goal and detail-oriented Front-End Web Developer based in Winnipeg.</p>
+            <a href="resume.PDF" target="_blank" class="btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--About section -->
+  <section class="about r-p" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 profile mt-5 mt-lg-0" data-aos="fade-right">
+          <img src="images/profile.jpg" class="img-fluid img-thumbnail" alt="profile picture">
+        </div>
+        <div class="col-lg-6 about-p about-column" data-aos="fade-left">
+          <h2>About Me</h2>
+          <h4>Hola! <span style="color:#E96F85"></span>I'm Daniel</h4>
+          <p data-aos="fade-down">Thanks for checking out my Portfolio. I'm a Salvadoran Front End Developer from Manitoba, I have years of experience with client work, and negotiating complex issues.</p>
+          <p data-aos="fade-up">I am a <span class="udemy">Udemy</span> graduate, with experience writing code, building and mainting sites in WordPress and more. This has allowed me to earn a strong foundation for web development and the skillset for building complex solutions.</p>
+          <p data-aos="fade-down">I spend most of my free time <span class="crossed">playing</span> <span class="dying-red">dying</span> on Elden Ring, playing with my cat, or reading. Feel free to send me your book recommendations!</p>
+          <p data-aos="fade-up">I am looking to work with people that empower and challenge their employees to be the best professionals they can be.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="exp-class" id="exp-id">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 a-skill d-flex justify-content-center align-items-center" data-aos="fade-down">
+          <h3>My Skills</h3>
+        </div>
+        <div class="col-md-6">
+          <label>HTML</label>
+          <div class="progress">
+            <div class="progress-bar" role='progressbar' style='width:0%' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'>95%</div>
+          </div>
+
+          <label>CSS</label>
+          <div class="progress">
+            <div class="progress-bar" role='progressbar' style='width:0%' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'>95%</div>
+          </div>
+
+          <label>SCSS/SASS</label>
+          <div class="progress">
+            <div class="progress-bar" role='progressbar' style='width:0%' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'>95%</div>
+          </div>
+
+          <label>Bootstrap</label>
+          <div class="progress">
+            <div class="progress-bar" role='progressbar' style='width:0%' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'>85%</div>
+          </div>
+
+          <label>JavaScript</label>
+          <div class="progress">
+            <div class="progress-bar" role='progressbar' style='width:0%' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'>90%</div>
+          </div>
+
+          <label>jQuery</label>
+          <div class="progress">
+            <div class="progress-bar" role='progressbar' style='width:0%' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'>90%</div>
+          </div>
+
+          <label>Photoshop</label>
+          <div class="progress">
+            <div class="progress-bar" role='progressbar' style='width:0%' aria-valuenow='0' aria-valuemin='0' aria-valuemax='100'>75%</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+<section class="portfolio py-5" id="portfolio">
+  <div class="container-lg py-4">
+    <div class="row justify-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <h2 class="fw-bold mb-5">Latest Projects</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-1.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Fitness Website</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-2.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">eCommerce Website</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-3.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Online Grocery Store</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-4.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Restaurant Website</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-5.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Color Gradient Website</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="portfolio-item">
+          <img src="images/portfolio-6.png" alt="" alt="portfolio image" class="w-100 img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2">Simon Says Game</h3>
+          <p class="mb-4"><a href="#" class="text-danger text-decoration-none">Live Demo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Hire me -->
+
+  <section id='contact-id'>
+    <div class="container">
+      <h2 class="contact-title" data-aos="fade-down"> Contact</h2>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div class="text-section">
+            <h3 class="text-contact text-top" data-aos="fade-left">Let's Connect</h3>
+            <h2 class="text-contact" data-aos="fade-down">I come from a Sales and Finance background, so I know that precentation is key when engaging with clients. If you are looking for functional, beautiful looking websites to further engage with
+              your
+              users, I think I'm your guy</h2>
+            <h2 class="text-contact" data-aos="fade-up">Work ethic and dedication have been at the forefront of every project I've been a part of, and I want to take those principles to your business. Shoot me an email and lets get to work.</h2>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12" data-aos="fade-up">
+          <form class="text-form col-md-7" action="https://formsubmit.co/dchavez3395@gmail.com" method="POST">
+            <!-- Honeypot -->
+            <input type="text" name="_honey" style="display: none;">
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false">
+            <div class="inputBox" data-aos="fade-left">
+              <input type="text" required>
+              <h3>full name</h3>
+            </div>
+            <div class="inputBox"data-aos="fade-right">
+              <input type="text" required>
+              <h3>e-mail</h3>
+            </div>
+            <div class="inputBox" data-aos="fade-left">
+              <textarea required name="name" rows="10" cols="30"></textarea>
+              <h3>message</h3>
+            </div>
+            <input data-aos="fade-right" type="submit" name="" value="send">
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="row">
+        <div class="col">
+          <div class="r-icon text-center mt-3">
+            <ul>
+              <li class="list-inline-item"><a href="https://www.linkedin.com/in/danielchavez2/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a href="https://github.com/dchavez3395" target="_blank"><i class="fab fa-github"></i></a></li>
+              <li class="list-inline-item"><a href="https://www.instagram.com/theycallmedaniel_/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          <p class="text-muted" style='font-size:14px;'>&copy; 2022 | Webstite by Daniel Chavez </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script src="lib\jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+  <script src="lib\js\bootstrap.min.js"></script>
+  <script src="lib/typed.js"></script>
+  <script src="lib\jquery.waypoints.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="index.js"></script>
+</body>
+
+</html>
