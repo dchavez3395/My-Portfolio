@@ -288,6 +288,7 @@ header{
         }
         p{
           width: 80%;
+
           .crossed {
             text-decoration: line-through;
           }
@@ -621,7 +622,7 @@ body{
   }
 
   .navbar{
-    height: 70px;
+    height: 80px;
     .navbar-container{
       display: flex;
       justify-content: space-between;
@@ -724,76 +725,6 @@ body{
 
 @media only screen and (min-device-width: 280px) and (max-device-width: 1028px) {
 
-
-
-  #menu-btn{
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-    color:  $lightRed;
-    font-size: 3rem;
-    display: block;
-    cursor: pointer;
-
-    &.fa-times{
-      transform: rotate(180deg);
-    }
-  }
-
-
-  .navbar-container {
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    padding: 0;
-    margin-left: -5%;
-  }
-
-  .navbar-menu {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    width: 100%;
-    position: absolute;
-    top: -1000px;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: -1;
-    background: white;
-  }
-
-  .navbar-menu.active {
-    background: white;
-    top: 100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 99;
-    margin-left: -5%;
-  a{
-    color: black !important;
-    font-size: 2.5rem;
-  }
-  }
-
-  #navbar-logo {
-    padding-left: 4rem;
-    font-size: 3.6rem;
-  }
-
-  .navbar-item {
-    width: auto;
-  }
-
-  .navbar-links {
-    text-align: center;
-    padding: 2rem;
-    width: auto;
-    display: table;
-    height: auto;
-    font-size: 1.6rem;
-  }
-
   #mobile-menu {
     position: absolute;
     top: 20%;
@@ -843,6 +774,7 @@ body{
         background: white;
         .navbar-item{
           width: auto;
+          height: 100px;
           .navbar-links{
             text-align: center;
             padding: 2rem;
@@ -912,9 +844,7 @@ header{
       }
       p{
         font-size: 1.8rem;
-
-
-
+        line-height: 35px;
       }
     }
   }
@@ -974,6 +904,84 @@ header{
     }
   }
 }*/
+
+.portfolio{
+  .container-lg{
+    .row{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .col-lg-8{
+        .section-title{
+          .mb-5{
+            font-size: 2.5rem !important;
+          }
+        }
+      }
+      .col-sm-12{
+        width: 90%;
+        height: auto;
+        .portfolio-item{
+          margin-bottom: 10% !important;
+          img{
+            height: 390px!important;
+          }
+          h3{
+            font-size: 2.5rem !important;
+          }
+          p{
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+#contact-id{
+.container{
+  .contact-title{
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+  .row{
+    .col-lg-6{
+      .text-section{
+        margin-top: 10%;
+        h3{
+
+        }
+      }
+      .text-form{
+        margin-top: 7%;
+      }
+    }
+  }
+}
+
+  }
+
+footer{
+  .container{
+    .row{
+      .col{
+        .r-icon{
+          ul{
+            li{
+              a{
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+        .text-muted{
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
 
 
 
